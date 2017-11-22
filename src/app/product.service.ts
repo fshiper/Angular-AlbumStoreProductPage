@@ -10,8 +10,8 @@ export class ProductService {
   private _albumUrl = "../assets/album.json";
 
   getAlbum(id :number) {
-    this._http.get(this._albumUrl)
-      .map(res => res.json());
+    return this._http.get(this._albumUrl)
+                     .map(res => res.json());
   }
 
 }
